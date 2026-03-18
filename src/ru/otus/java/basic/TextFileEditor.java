@@ -11,7 +11,7 @@ public class TextFileEditor {
         File[] files = currentDir.listFiles();
 
         if (files == null || files.length == 0) {
-            System.out.println("В текущем каталоге нет файлов.");
+            System.out.println("В текущем каталоге нет файлов");
             return;
         }
 
@@ -55,8 +55,8 @@ public class TextFileEditor {
         }
         System.out.println("----------------------------------------");
 
-        System.out.println("\nТеперь вы можете дописывать строки в файл.");
-        System.out.println("Введите строку и нажмите Enter. Для выхода введите пустую строку или 'exit'.");
+        System.out.println("\nТеперь вы можете дописывать строки в файл");
+        System.out.println("Введите строку и нажмите Enter. Для выхода введите пустую строку или 'exit'");
 
         try (PrintStream printStream = new PrintStream(
                 new BufferedOutputStream(new FileOutputStream(selectedFile, true)), true, StandardCharsets.UTF_8)) {
@@ -64,7 +64,7 @@ public class TextFileEditor {
                 System.out.print("> ");
                 String input = consoleScanner.nextLine();
                 if (input.isEmpty() || input.equalsIgnoreCase("exit")) {
-                    System.out.println("Завершение работы.");
+                    System.out.println("Завершение работы");
                     break;
                 }
                 printStream.println(input);
