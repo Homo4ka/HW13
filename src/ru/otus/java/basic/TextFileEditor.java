@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class TextFileEditor {
 
     public static void main(String[] args) {
-        File currentDir = new File(".");
+        File currentDir = new File(System.getProperty("user.dir"));
         File[] files = currentDir.listFiles();
 
         if (files == null || files.length == 0) {
